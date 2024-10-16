@@ -1,16 +1,19 @@
-import Link from "next/link";
 import { ReactNode } from "react";
-import style from "./globals-layout.module.css";
+import Link from "next/link";
+import style from "./global-layout.module.css";
 
-function GlobalLayout({ children }: { children: ReactNode }) {
+export default function GlobalLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <div className={style.container}>
       <header className={style.header}>
         <Link href={"/"}>📚 ONEBITE BOOKS</Link>
       </header>
       <main className={style.main}>{children}</main>
-      <footer className={style.footer}>제작 @MinHyeok</footer>
+      <footer className={style.footer}>제작 @winterlood</footer>
     </div>
   );
 }
-export default GlobalLayout;
