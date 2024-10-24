@@ -15,6 +15,7 @@ export const getStaticProps = async () => {
 
   return {
     props: { allBooks, recoBooks },
+    revalidate: 3, //3초마다 재생성(ISR)
   };
 };
 
